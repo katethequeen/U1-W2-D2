@@ -28,7 +28,7 @@ console.log("25 è divisibile per 5? " + (25 % 5) ? true : false);
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 let num1 = 7;
-let num2 = 8;
+let num2 = 3;
 
 console.log(num1 === 8 || num2 === 8 || num1 + num2 === 8 || num1 - num2 === 8 ? "There's 8" : "Not 8");
 
@@ -72,15 +72,23 @@ if (totalShoppingCart > 50) {
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-let a = 6;
-let b = 2;
+let a = 3;
+let b = 65;
 let c = 8;
 
 if (a > b && a > c && b > c) {
   console.log("L'ordine dei valori è: " + a + " - " + b + " - " + c);
 } else if (b > a && b > c && a > c) {
   console.log("L'ordine dei valori è: " + b + " - " + a + " - " + c);
-} else if ()
+} else if (c > a && c > b && b > a) {
+  console.log("L'ordine dei valori è: " + c + " - " + b + " - " + a);
+} else if (a > b && a > c && c > b) {
+  console.log("L'ordine dei valori è: " + a + " - " + c + " - " + b);
+} else if (b > a && b > c && c > a) {
+  console.log("L'ordine dei valori è: " + b + " - " + c + " - " + a);
+} else {
+  console.log("L'ordine dei valori è: " + c + " - " + a + " - " + b);
+}
 
 /* ESERCIZIO 8
   Crea un algoritmo per verificare che un valore fornito sia un numero oppure no (suggerimento: cerca su un motore di ricerca "typeof").
@@ -88,12 +96,12 @@ if (a > b && a > c && b > c) {
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-const valore = prompt("Inserisci un valore numerico o letterale e ti dirò che tipo è!");
+const valore = 99;
 
-if (valore === Number) {
+if (typeof valore === "number") {
   console.log("Il valore che hai inserito è un numero");
 }
-if (valore === String) {
+if (typeof valore === "string") {
   console.log("Il valore che hai inserito è una stringa");
 }
 
@@ -113,13 +121,15 @@ if (userNumber % 2 === 0) {
 
 /* ESERCIZIO 10
   Modifica la logica del seguente algoritmo in modo che mostri in console il messaggio corretto in ogni circostanza. */
-let val = 4;
+let val = 7;
 
 if (val < 10) {
-  console.log("Meno di 5");
-} else if (val < 5) {
   console.log("Meno di 10");
-} else {
+}
+if (val < 5) {
+  console.log("Meno di 5");
+}
+if (val > 10) {
   console.log("Uguale a 10 o maggiore");
 }
 
